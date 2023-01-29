@@ -7,8 +7,8 @@
 cp -rf ../immortalwrt-luci/applications/luci-app-accesscontrol package/new/
 
 # ADBYBY Plus +
-svn export -q https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-adbyby-plus package/new/luci-app-adbyby-plus
-cp -rf ../immortalwrt-packages/net/adbyby package/new/
+# svn export -q https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-adbyby-plus package/new/luci-app-adbyby-plus
+# cp -rf ../immortalwrt-packages/net/adbyby package/new/
 
 # arpbind
 cp -rf ../immortalwrt-luci/applications/luci-app-arpbind package/new/
@@ -85,9 +85,9 @@ cp -rf ../immortalwrt-luci/applications/luci-app-autoreboot package/new/
 svn export -q https://github.com/tty228/luci-app-serverchan/trunk package/new/luci-app-serverchan
 
 # ShadowsocksR Plus+
-svn export -q https://github.com/fw876/helloworld/trunk package/helloworld
-svn export -q https://github.com/coolsnowwolf/packages/trunk/net/shadowsocks-libev package/helloworld/shadowsocks-libev
-rm -rf ./feeds/packages/net/{xray-core,shadowsocks-libev}
+# svn export -q https://github.com/fw876/helloworld/trunk package/helloworld
+# svn export -q https://github.com/coolsnowwolf/packages/trunk/net/shadowsocks-libev package/helloworld/shadowsocks-libev
+# rm -rf ./feeds/packages/net/{xray-core,shadowsocks-libev}
 
 # USB Printer
 cp -rf ../immortalwrt-luci/applications/luci-app-usb-printer package/new/
@@ -100,7 +100,7 @@ cp -rf ../immortalwrt-packages/net/vlmcsd package/new/
 cp -rf ../immortalwrt-luci/applications/luci-app-xlnetacc package/new/
 
 # Zerotier
-cp -rf ../immortalwrt-luci/applications/luci-app-zerotier package/new/
+# cp -rf ../immortalwrt-luci/applications/luci-app-zerotier package/new/
 
 # default settings and translation
 cp -rf ../default-settings package/new/
@@ -110,3 +110,32 @@ sed -i 's,16384,65536,g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 
 # fix include luci.mk
 find package/new/ -type f -name Makefile -exec sed -i 's,../../luci.mk,$(TOPDIR)/feeds/luci/luci.mk,g' {} +
+
+# luci-app-ddns
+cp -rf ../immortalwrt-luci/applications/luci-app-ddns package/new/
+
+# luci-app-filetransfer
+cp -rf ../immortalwrt-luci/applications/luci-app-filetransfer package/new/
+
+# luci-app-iptvhelper
+cp -rf ../immortalwrt-luci/applications/luci-app-iptvhelper package/new/
+cp -rf ../immortalwrt-packages/net/iptvhelper package/new/
+
+# luci-app-mwan3
+cp -rf ../immortalwrt-luci/applications/luci-app-mwan3 package/new/
+cp -rf ../immortalwrt-packages/net/mwan3 package/new/
+
+# luci-app-mwan3helper
+cp -rf ../immortalwrt-luci/applications/luci-app-mwan3helper package/new/
+
+# luci-app-omcproxy
+cp -rf ../immortalwrt-luci/applications/luci-app-omcproxy package/new/
+
+# luci-app-udpxy
+cp -rf ../immortalwrt-luci/applications/luci-app-udpxy package/new/
+
+# luci-app-wol
+cp -rf ../immortalwrt-luci/applications/luci-app-wol package/new/
+
+# luci-theme-material
+cp -rf ../immortalwrt-luci/applications/luci-theme-material package/new/
