@@ -5,36 +5,16 @@
 
 # Access Control
 cp -rf ../immortalwrt-luci/applications/luci-app-accesscontrol package/new/
-
-# ddns
 cp -rf ../immortalwrt-luci/applications/luci-app-ddns package/new/
-
-# iptvhelper
 cp -rf ../immortalwrt-luci/applications/luci-app-iptvhelper package/new/
 cp -rf ../immortalwrt-packages/net/iptvhelper package/new/
-
-# mwan3
 cp -rf ../immortalwrt-luci/applications/luci-app-mwan3 package/new/
 cp -rf ../immortalwrt-packages/net/mwan3 package/new/
-
-# mwan3helper
 cp -rf ../immortalwrt-luci/applications/luci-app-mwan3helper package/new/
-
-# omcproxy
 cp -rf ../immortalwrt-luci/applications/luci-app-omcproxy package/new/
-
-# udpxy
 cp -rf ../immortalwrt-luci/applications/luci-app-udpxy package/new/
-
-# wol
 cp -rf ../immortalwrt-luci/applications/luci-app-wol package/new/
-
-# theme
 cp -rf ../immortalwrt-luci/applications/luci-theme-material package/new/
-
-# ADBYBY Plus +
-# svn export -q https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-adbyby-plus package/new/luci-app-adbyby-plus
-# cp -rf ../immortalwrt-packages/net/adbyby package/new/
 
 # arpbind
 cp -rf ../immortalwrt-luci/applications/luci-app-arpbind package/new/
@@ -110,11 +90,6 @@ cp -rf ../immortalwrt-luci/applications/luci-app-autoreboot package/new/
 # SeverChan
 svn export -q https://github.com/tty228/luci-app-serverchan/trunk package/new/luci-app-serverchan
 
-# ShadowsocksR Plus+
-# svn export -q https://github.com/fw876/helloworld/trunk package/helloworld
-# svn export -q https://github.com/coolsnowwolf/packages/trunk/net/shadowsocks-libev package/helloworld/shadowsocks-libev
-# rm -rf ./feeds/packages/net/{xray-core,shadowsocks-libev}
-
 # USB Printer
 cp -rf ../immortalwrt-luci/applications/luci-app-usb-printer package/new/
 
@@ -124,9 +99,6 @@ cp -rf ../immortalwrt-packages/net/vlmcsd package/new/
 
 # xlnetacc
 cp -rf ../immortalwrt-luci/applications/luci-app-xlnetacc package/new/
-
-# Zerotier
-# cp -rf ../immortalwrt-luci/applications/luci-app-zerotier package/new/
 
 # default settings and translation
 cp -rf ../default-settings package/new/
