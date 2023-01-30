@@ -108,3 +108,6 @@ sed -i 's,16384,65536,g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 
 # fix include luci.mk
 find package/new/ -type f -name Makefile -exec sed -i 's,../../luci.mk,$(TOPDIR)/feeds/luci/luci.mk,g' {} +
+
+# 修改默认ip
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
