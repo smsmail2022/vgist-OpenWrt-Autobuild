@@ -6,6 +6,32 @@
 # Access Control
 cp -rf ../immortalwrt-luci/applications/luci-app-accesscontrol package/new/
 
+# ddns
+cp -rf ../immortalwrt-luci/applications/luci-app-ddns package/new/
+
+# iptvhelper
+cp -rf ../immortalwrt-luci/applications/luci-app-iptvhelper package/new/
+cp -rf ../immortalwrt-packages/net/iptvhelper package/new/
+
+# mwan3
+cp -rf ../immortalwrt-luci/applications/luci-app-mwan3 package/new/
+cp -rf ../immortalwrt-packages/net/mwan3 package/new/
+
+# mwan3helper
+cp -rf ../immortalwrt-luci/applications/luci-app-mwan3helper package/new/
+
+# omcproxy
+cp -rf ../immortalwrt-luci/applications/luci-app-omcproxy package/new/
+
+# udpxy
+cp -rf ../immortalwrt-luci/applications/luci-app-udpxy package/new/
+
+# wol
+cp -rf ../immortalwrt-luci/applications/luci-app-wol package/new/
+
+# theme
+cp -rf ../immortalwrt-luci/applications/luci-theme-material package/new/
+
 # ADBYBY Plus +
 # svn export -q https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-adbyby-plus package/new/luci-app-adbyby-plus
 # cp -rf ../immortalwrt-packages/net/adbyby package/new/
@@ -110,32 +136,3 @@ sed -i 's,16384,65536,g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 
 # fix include luci.mk
 find package/new/ -type f -name Makefile -exec sed -i 's,../../luci.mk,$(TOPDIR)/feeds/luci/luci.mk,g' {} +
-
-# luci-app-ddns
-cp -rf ../immortalwrt-luci/applications/luci-app-ddns package/new/
-
-# luci-app-filetransfer
-cp -rf ../immortalwrt-luci/applications/luci-app-filetransfer package/new/
-
-# luci-app-iptvhelper
-cp -rf ../immortalwrt-luci/applications/luci-app-iptvhelper package/new/
-cp -rf ../immortalwrt-packages/net/iptvhelper package/new/
-
-# luci-app-mwan3
-cp -rf ../immortalwrt-luci/applications/luci-app-mwan3 package/new/
-cp -rf ../immortalwrt-packages/net/mwan3 package/new/
-
-# luci-app-mwan3helper
-cp -rf ../immortalwrt-luci/applications/luci-app-mwan3helper package/new/
-
-# luci-app-omcproxy
-cp -rf ../immortalwrt-luci/applications/luci-app-omcproxy package/new/
-
-# luci-app-udpxy
-cp -rf ../immortalwrt-luci/applications/luci-app-udpxy package/new/
-
-# luci-app-wol
-cp -rf ../immortalwrt-luci/applications/luci-app-wol package/new/
-
-# luci-theme-material
-cp -rf ../immortalwrt-luci/applications/luci-theme-material package/new/
