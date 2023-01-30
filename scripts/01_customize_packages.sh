@@ -5,16 +5,17 @@
 
 # Access Control
 cp -rf ../immortalwrt-luci/applications/luci-app-accesscontrol package/new/
-cp -rf ../immortalwrt-luci/applications/luci-app-ddns package/new/
-cp -rf ../immortalwrt-luci/applications/luci-app-iptvhelper package/new/
-cp -rf ../immortalwrt-packages/net/iptvhelper package/new/
-cp -rf ../immortalwrt-luci/applications/luci-app-mwan3 package/new/
-cp -rf ../immortalwrt-packages/net/mwan3 package/new/
-cp -rf ../immortalwrt-luci/applications/luci-app-mwan3helper package/new/
-cp -rf ../immortalwrt-luci/applications/luci-app-omcproxy package/new/
-cp -rf ../immortalwrt-luci/applications/luci-app-udpxy package/new/
-cp -rf ../immortalwrt-luci/applications/luci-app-wol package/new/
-cp -rf ../immortalwrt-luci/applications/luci-theme-material package/new/
+
+svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-ddns package/new/luci-app-ddns
+svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-iptvhelper package/new/luci-app-iptvhelper
+svn export -q https://github.com/immortalwrt/packages/trunk/net/iptvhelper package/new/iptvhelper
+svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-mwan3 package/new/luci-app-mwan3
+svn export -q https://github.com/immortalwrt/packages/trunk/net/mwan3 package/new/mwan3
+svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-mwan3helper package/new/luci-app-mwan3helper
+svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-omcproxy package/new/luci-app-omcproxy
+svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-udpxy package/new/luci-app-udpxy
+svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-wol package/new/luci-app-wol
+svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-theme-material package/new/luci-theme-material
 
 # arpbind
 cp -rf ../immortalwrt-luci/applications/luci-app-arpbind package/new/
