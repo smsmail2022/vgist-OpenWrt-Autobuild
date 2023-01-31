@@ -6,16 +6,29 @@
 # Access Control
 cp -rf ../immortalwrt-luci/applications/luci-app-accesscontrol package/new/
 
-svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-ddns package/new/luci-app-ddns
-svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-iptvhelper package/new/luci-app-iptvhelper
-svn export -q https://github.com/immortalwrt/packages/trunk/net/iptvhelper package/new/iptvhelper
-svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-mwan3 package/new/luci-app-mwan3
-svn export -q https://github.com/immortalwrt/packages/trunk/net/mwan3 package/new/mwan3
-svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-mwan3helper package/new/luci-app-mwan3helper
-svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-omcproxy package/new/luci-app-omcproxy
-svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-udpxy package/new/luci-app-udpxy
-svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-app-wol package/new/luci-app-wol
-svn export -q https://github.com/immortalwrt/luci/trunk/applications/luci-theme-material package/new/luci-theme-material
+# luci-app-ddns
+cp -rf ../immortalwrt-luci/applications/luci-app-ddns package/new/luci-app-ddns
+
+# luci-app-iptvhelper
+cp -rf ../immortalwrt-luci/applications/luci-app-iptvhelper package/new/luci-app-iptvhelper
+
+# luci-app-mwan3
+cp -rf ../immortalwrt-luci/applications/luci-app-mwan3 package/new/luci-app-mwan3
+
+# luci-app-mwan3helper
+cp -rf ../immortalwrt-luci/applications/luci-app-mwan3helper package/new/luci-app-mwan3helper
+
+# luci-app-omcproxy
+cp -rf ../immortalwrt-luci/applications/luci-app-omcproxy package/new/luci-app-omcproxy
+
+# luci-app-udpxy
+cp -rf ../immortalwrt-luci/applications/luci-app-udpxy package/new/luci-app-udpxy
+
+# luci-app-wol
+cp -rf ../immortalwrt-luci/applications/luci-app-wol package/new/luci-app-wol
+
+# luci-theme-material
+cp -rf ../immortalwrt-luci/applications/luci-theme-material package/new/luci-theme-material
 
 # arpbind
 cp -rf ../immortalwrt-luci/applications/luci-app-arpbind package/new/
@@ -109,6 +122,3 @@ sed -i 's,16384,65536,g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 
 # fix include luci.mk
 find package/new/ -type f -name Makefile -exec sed -i 's,../../luci.mk,$(TOPDIR)/feeds/luci/luci.mk,g' {} +
-
-# 修改默认ip
-sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
